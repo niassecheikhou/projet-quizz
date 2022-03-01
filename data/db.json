@@ -1,0 +1,21 @@
+{
+    "users ":[
+        {
+            "nom":"Thiam",
+            "prenom":"Ibrahima",
+            "login":"joueur@gmail.com",
+            "password":"joueur",
+            "role": "ROLE_JOUEUR",
+            "score": 17
+        },
+        {
+            "nom":"Cisse",
+            "prenom":"Salimata",
+            "login":"admin@gmail.com",
+            "password":"admin",
+            "role": "ROLE_ADMIN",
+            "score": 0
+            
+        }
+    ]
+}
