@@ -29,7 +29,7 @@
            if($_REQUEST["action"]=="connexion"){
 
             // echo " charger la page de connexion";
-            require_once (PATH_WIEWS."securite/connexion.html.php");
+            require_once (PATH_VIEWS."securite/connexion.html.php");
             }
          }else{
             echo " charger la page de connexion";

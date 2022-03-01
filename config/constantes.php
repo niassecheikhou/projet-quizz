@@ -14,7 +14,7 @@
 
 
 // chemin sur le dossier templete 
-    define("PATH_WIEWS",ROOT."templates".DIRECTORY_SEPARATOR);
+    define("PATH_VIEWS",ROOT."templates".DIRECTORY_SEPARATOR);
 
 //chemin sur data qui mene sur le fichier db.json
     define("PATH_DB",ROOT."data".DIRECTORY_SEPARATOR."db.json");
