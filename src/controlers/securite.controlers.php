@@ -28,7 +28,8 @@
           if(isset($_REQUEST["action"])){
            if($_REQUEST["action"]=="connexion"){
 
-            echo " charger la page de connexion";
+            // echo " charger la page de connexion";
+            require_once (PATH_WIEWS."securite/connexion.html.php");
             }
          }else{
             echo " charger la page de connexion";
