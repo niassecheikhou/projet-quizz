@@ -1,9 +1,7 @@
 <?php 
   // creer un chemin sur le dossier racine du projet
   // demarrage de la session
-    if (session_start() ==PHP_SESSION_NONE){
-       session_start(); 
-    }
+    
 
      define('ROOT',str_replace("public".DIRECTORY_SEPARATOR."index.php","",$_SERVER['SCRIPT_FILENAME']));
       

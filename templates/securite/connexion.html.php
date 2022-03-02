@@ -14,13 +14,13 @@
             <!-- zone de connexion -->
             
             <form action="<?=WEB_ROOT?>" method="POST">
-                <input type="hidden" name="controler" value="securite">
+                <input type="hidden" name="controlers" value="securite">
                 <input type="hidden" name="action" value="connexion">
                 <!-- <h1>Connexion</h1> -->
                 <div id="form-login">
                     <h3>login form</h3>
                     <?php if(isset($errors['connexion'])) :?>
-                    <p style="color:red"><?php echo $errors['connexion']?></p>
+                    <p style="color:red"><?=$errors['connexion']?></p>
                     <?php endif ?>
                     <img src="<?=WEB_PUBLIC."imag".DIRECTORY_SEPARATOR."ic-ajout.png"?>">
                 </div>
@@ -32,6 +32,9 @@
                   </div>
                 <!-- <label><b>Mot de passe</b></label> -->
                 <div class="form-group">
+                    <?php if(isset($errors['connexion'])) :?>
+                    <p style="color:red"><?=$errors['connexion']?></p>
+                    <?php endif ?>
                          <input type="password" placeholder=" Mot de passe" name="password">
                          <img src="<?=WEB_PUBLIC."imag".DIRECTORY_SEPARATOR."ic-password.png"?>">
                 </
