@@ -11,6 +11,7 @@
                 // echo "Traiter le formulaire de connexion";
 
                 // recuperation des donnees
+                var_dump($_POST);die();
                 $login=$_POST["login"];
                 $password=$_POST["password"];
                 connexion($login,$password);
