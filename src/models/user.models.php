@@ -11,3 +11,12 @@ function find_user_login_password(string $login,string $password):array{
     }
     return [];
 }
+function find_users(string $role):array{
+    $users=json_to_array("users");
+    $result=[];
+    foreach ($users as $users) {
+        if($users['role']==$role) 
+        $result[]=$users;
+    }
+    return $result;
+}

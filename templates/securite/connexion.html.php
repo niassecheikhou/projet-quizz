@@ -1,7 +1,10 @@
 <?php 
   require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
-  $errors=$_SESSION[KEY_ERRORS];
-  unset($_SESSION[KEY_ERRORS]);
+  if(isset($_SESSION[KEY_ERRORS])){
+    $errors=$_SESSION[KEY_ERRORS];
+    unset($_SESSION[KEY_ERRORS]);
+  }
+  
 ?>
         <div id="text">
            <h1>le plaisir de jouer</h1>
@@ -30,15 +33,18 @@
                          <input type="text" placeholder="login" name="login">
                          <img src="<?=WEB_PUBLIC."imag".DIRECTORY_SEPARATOR."ic-login.png"?>">
                   </div>
+                  <?php if(isset($errors['login'])) :?>
+                    <p style="color:red"><?=$errors['login']?></p>
+                    <?php endif ?>
                 <!-- <label><b>Mot de passe</b></label> -->
                 <div class="form-group">
-                    <?php if(isset($errors['connexion'])) :?>
-                    <p style="color:red"><?=$errors['connexion']?></p>
-                    <?php endif ?>
+                    
                          <input type="password" placeholder=" Mot de passe" name="password">
                          <img src="<?=WEB_PUBLIC."imag".DIRECTORY_SEPARATOR."ic-password.png"?>">
-                </
                 </div>
+                <?php if(isset($errors['password'])) :?>
+                    <p style="color:red"><?=$errors['password']?></p>
+                    <?php endif ?>
                 <div id="form-boutton">
                          <button type="submit" id='submit' value='LOGIN' >Connexion</button>
                          <p style="color:red"></p>

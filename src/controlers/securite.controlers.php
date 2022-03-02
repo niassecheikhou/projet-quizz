@@ -26,9 +26,13 @@
       
           if(isset($_REQUEST["action"])){
            if($_REQUEST["action"]=="connexion"){
-
             // echo " charger la page de connexion";
+            
+               
             require_once (PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php");
+
+            }elseif($_REQUEST["action"]=="deconnexion"){
+               logout();
             }
          }else{
             require_once (PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php");
@@ -53,9 +57,10 @@
                      // appell d'une fonction du models
                    $user=find_user_login_password($login,$password);
                    
-                  if(count($user)!==0){
+                  if(count($user)!==0){ 
                     
                     // utilisateur existe 
+                     // des que l'utilisateur se connect on le met dans la session
                     $_SESSION[KEY_USER_CONNECT]=$user;
                      
                     header("Location: ".WEB_ROOT."?controlers=user&action=acceuil");
@@ -76,4 +81,11 @@
                header("Location: ".WEB_ROOT);
                exit();
             }
+    }
+
+    function logout(){
+       session_destroy();
+       header("Location: ".WEB_ROOT);
+       exit();
+        
     }

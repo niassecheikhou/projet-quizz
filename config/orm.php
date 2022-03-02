@@ -12,7 +12,7 @@ function json_to_array(string $key):array{
 
 // enregistrement et mis en jour du fichier json 
 
-function save_data(string $key,array $data):array{
+function array_to_json(string $key,array $data):array{
     return [];
 }
 

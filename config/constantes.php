@@ -19,7 +19,7 @@
 
   // pour envoyer les requetes get et post
   
-    define("WEB_ROOT","http://localhost:8002/ ");
+    define("WEB_ROOT","http://localhost:8002/");
     // URL charger les Images css et js 
     define("WEB_PUBLIC",str_replace("index.php","",$_SERVER['SCRIT_NAME'] ));
 
