@@ -16,7 +16,9 @@
         <div id="container">
             <!-- zone de connexion -->
             
-            <form action="<?=WEB_ROOT?>" method="POST">
+            <form action="<?=WEB_ROOT?>" method="POST" id="form">
+            <div class="error" id="error"></div>
+
                 <input type="hidden" name="controlers" value="securite">
                 <input type="hidden" name="action" value="connexion">
                 <!-- <h1>Connexion</h1> -->
@@ -30,7 +32,7 @@
                 
                 <!-- <label><b>login</b></label> -->
                 <div class="form-group">
-                         <input type="text" placeholder="login" name="login">
+                         <input type="text" placeholder="login"id=login name="login">
                          <img src="<?=WEB_PUBLIC."imag".DIRECTORY_SEPARATOR."ic-login.png"?>">
                   </div>
                   <?php if(isset($errors['login'])) :?>
@@ -39,7 +41,7 @@
                 <!-- <label><b>Mot de passe</b></label> -->
                 <div class="form-group">
                     
-                         <input type="password" placeholder=" Mot de passe" name="password">
+                         <input type="password" placeholder=" Mot de passe" id='password' name="password">
                          <img src="<?=WEB_PUBLIC."imag".DIRECTORY_SEPARATOR."ic-password.png"?>">
                 </div>
                 <?php if(isset($errors['password'])) :?>
@@ -48,7 +50,7 @@
                 <div id="form-boutton">
                          <button type="submit" id='submit' value='LOGIN' >Connexion</button>
                          <p style="color:red"></p>
-                        <a href=""> S'inscire pour jouer</a>
+                        <a href="<?=WEB_ROOT."?controlers=securite&action=register"?>"> S'inscire pour jouer</a>
                 </div>
             </form>
         </div>

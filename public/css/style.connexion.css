@@ -36,6 +36,9 @@ body{
     height: 8vh;
     font-size: 40px;
 }
+.error{
+    color: rgb(185, 48, 48);
+}
 #text>img{
     width: 10vh;
 height: 10vh;

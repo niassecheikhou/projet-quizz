@@ -31,16 +31,20 @@
             // require_once (PATH_VIEWS."user".DIRECTORY_SEPARATOR."acceuil.html.php");
 
             }elseif($_REQUEST['action']=="liste.joueur"){
+               
                lister_joueur(); 
             }
          }
      } 
      function lister_joueur(){
+        
         // appel du model
         ob_start();
         $data=find_users(ROLE_JOUEUR);
+     
         require_once (PATH_VIEWS."user".DIRECTORY_SEPARATOR."liste.joueur.html.php");
-        $content_for_views=ob_get_clean();
+         $content_for_views = ob_get_clean();
+      
         require_once (PATH_VIEWS."user".DIRECTORY_SEPARATOR."acceuil.html.php");
 
      }  

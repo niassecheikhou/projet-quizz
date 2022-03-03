@@ -16,6 +16,23 @@
             "role": "ROLE_ADMIN",
             "score": 0
             
+        },
+        {
+            "nom":"Diaw",
+            "prenom":"Ousmane",
+            "login":"admin@gmail.com",
+            "password":"admin",
+            "role": "ROLE_ADMIN",
+            "score": 0
+            
+        },
+        {
+            "nom":"Diop",
+            "prenom":"Pape",
+            "login":"jouer@gmail.com",
+            "password":"jouer",
+            "role": "ROLE_JOUEUR",
+            "score": 10
         }
     ]
 }

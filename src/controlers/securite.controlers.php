@@ -10,11 +10,19 @@
                 
                 // echo "Traiter le formulaire de connexion";
 
-                // recuperation des donnees
-               
-                $login=$_POST["login"];
+                // recuperation des donnee
+                 $login=$_POST["login"];
                 $password=$_POST["password"];
                 connexion($login,$password);
+        }elseif($_REQUEST["action"]=="register"){
+           
+            $nom=$_POST["nom"];
+            $prenom=$_POST["prenom"];
+            $login=$_POST["login"];
+            $password=$_POST["password"];
+            $password1=$_POST["password1"];
+            registration($nom,$prenom,$login,$password,$password1);
+            
         }
         }
      }
@@ -33,6 +41,8 @@
 
             }elseif($_REQUEST["action"]=="deconnexion"){
                logout();
+            }elseif($_REQUEST['action']=="register"){
+               require_once (PATH_VIEWS."securite".DIRECTORY_SEPARATOR."register.html.php");
             }
          }else{
             require_once (PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php");
@@ -88,4 +98,27 @@
        header("Location: ".WEB_ROOT);
        exit();
         
+    }
+
+    function registration(string $nom, string $prenom, string $login, string $password,String $password1){
+      $errors=[];
+     
+      champ_obligatoire('nom',$nom,$errors);
+      champ_obligatoire('prenom',$prenom,$errors);
+      champ_obligatoire('login',$login,$errors);
+      if(count($errors)==0){
+         valid_email('login',$login,$errors);
+         
+
+      }
+
+      champ_obligatoire('password',$password,$errors);
+      champ_obligatoire('password1',$password1,$errors);
+
+      if(count($errors)==0){
+
+      }else{
+         $_SESSION[KEY_ERRORS]=$errors;
+         header("Location: ".WEB_ROOT."?controlers=securite&action=register");
+      }
     }
