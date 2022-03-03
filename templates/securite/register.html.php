@@ -79,7 +79,7 @@
 			</div>
       <div class="input">
 			  	<input type="password" class="input-field" name="password1" id="password1" />
-			  	<label class="input-label" name="passwd">confirmer Password</label>
+			  	<label class="input-label" name="passwd">confirmerr Password</label>
                   <?php if(isset($errors['password1'])):?>
                     <p style="color:red"> <?= $errors['password1']?></p>
                     <?php endif ?> 
