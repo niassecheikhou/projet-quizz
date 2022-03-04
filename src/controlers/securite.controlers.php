@@ -21,7 +21,9 @@
             $login=$_POST["login"];
             $password=$_POST["password"];
             $password1=$_POST["password1"];
-            registration($nom,$prenom,$login,$password,$password1);
+            $role=$_POST["role"];
+            $score=$_POST["score"];
+            registration($nom,$prenom,$login,$password,$password1,$role,$score);
             
         }
         }
@@ -50,6 +52,7 @@
      } 
      //us1 
      function connexion(string $login, string $password):void{
+       
        
             $errors=[];
            
@@ -100,8 +103,9 @@
         
     }
 
-    function registration(string $nom, string $prenom, string $login, string $password,String $password1){
+    function registration(string $nom, string $prenom, string $login, string $password,String $password1, string $role,string $score){
       $errors=[];
+   
      
       champ_obligatoire('nom',$nom,$errors);
       champ_obligatoire('prenom',$prenom,$errors);
@@ -116,6 +120,11 @@
       champ_obligatoire('password1',$password1,$errors);
 
       if(count($errors)==0){
+         
+         $newUser=register_new_users();
+         array_to_json($newUser,"users");
+         header("Location: ".WEB_ROOT."?controlers=securite");
+         
 
       }else{
          $_SESSION[KEY_ERRORS]=$errors;

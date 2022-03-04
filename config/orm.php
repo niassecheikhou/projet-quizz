@@ -12,8 +12,18 @@ function json_to_array(string $key):array{
 
 // enregistrement et mis en jour du fichier json 
 
-function array_to_json(string $key,array $data):array{
-    return [];
+function array_to_json(array $newUser,$key){
+    // ici on récupere le contenu du ficher json sous format string
+    $dataJson=file_get_contents(PATH_DB);
+    // ici on le transforme en tableau
+    $data=json_decode($dataJson,true);
+    // on ajoute le nouveau utilisateur
+    $data['users'][]=$newUser;
+    // pour qu'il retuourne le ficher en string(donneé)
+    $fileNamData=json_encode($data);
+// et on retour les données en string
+    file_put_contents(PATH_DB, $fileNamData);
+
 }
 
 

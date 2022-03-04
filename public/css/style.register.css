@@ -1,9 +1,10 @@
 body{
 
-    background-image: url('../img/bac.jpg');
+  
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
+    background-image: url('..imag/db.jpeg'); 
     }
 
   .bar{
@@ -78,6 +79,7 @@ body{
 
 .container p {
   margin-left: 1rem;
+
 }
 
 
@@ -99,6 +101,7 @@ label{
 .input input:focus{
   border-color: skyblue;
   box-shadow: inset 0px 0px 2px 2px rgba(3, 238, 247, 0.25);
+  
 
   }
 

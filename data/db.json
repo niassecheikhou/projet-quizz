@@ -1,38 +1,52 @@
 {
-    "users":[
+    "users": [
         {
-            "nom":"Thiam",
-            "prenom":"Ibrahima",
-            "login":"joueur@gmail.com",
-            "password":"joueur",
+            "nom": "Thiam",
+            "prenom": "Ibrahima",
+            "login": "joueur@gmail.com",
+            "password": "joueur",
             "role": "ROLE_JOUEUR",
             "score": 17
         },
         {
-            "nom":"Cisse",
-            "prenom":"Salimata",
-            "login":"admin@gmail.com",
-            "password":"admin",
+            "nom": "Cisse",
+            "prenom": "Salimata",
+            "login": "admin@gmail.com",
+            "password": "admin",
             "role": "ROLE_ADMIN",
             "score": 0
-            
         },
         {
-            "nom":"Diaw",
-            "prenom":"Ousmane",
-            "login":"admin@gmail.com",
-            "password":"admin",
+            "nom": "Diaw",
+            "prenom": "Ousmane",
+            "login": "admin@gmail.com",
+            "password": "admin",
             "role": "ROLE_ADMIN",
             "score": 0
-            
         },
         {
-            "nom":"Diop",
-            "prenom":"Pape",
-            "login":"jouer@gmail.com",
-            "password":"jouer",
+            "nom": "Diop",
+            "prenom": "Pape",
+            "login": "jouer@gmail.com",
+            "password": "jouer",
             "role": "ROLE_JOUEUR",
             "score": 10
+        },
+        {
+            "nom": "oumy",
+            "prenom": "ndiaye",
+            "login": "niass@gmail.com",
+            "password": "ooooo",
+            "role": " ROLE_JOUEUR",
+            "score": "0"
+        },
+        {
+            "nom": "beye",
+            "prenom": "mbaye",
+            "login": "beye@gmail.com",
+            "password": "BBBBB",
+            "role": " ROLE_JOUEUR",
+            "score": "0"
         }
     ]
 }

@@ -11,6 +11,8 @@ function find_user_login_password(string $login,string $password):array{
     }
     return [];
 }
+// pour retrouver les utilisateurs pour les afficher dans la liste des utilisateurs
+
 function find_users(string $role):array{
     $users=json_to_array("users");
     $result=[];
@@ -19,4 +21,20 @@ function find_users(string $role):array{
         $result[]=$users;
     }
     return $result;
+}
+
+// pour ajouter un nouveau utilisateur dans  un tableau
+function register_new_users():array{
+
+      $exra = [
+            'nom' => $_POST['nom'],
+             'prenom' => $_POST['prenom'],
+             'login' => $_POST['login'],
+             'password' => $_POST['password'],
+             'role' => $_POST['role'],
+             'score' => $_POST['score']
+      ];
+
+
+      return $exra;
 }
