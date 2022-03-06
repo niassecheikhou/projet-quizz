@@ -1,11 +1,25 @@
 <?php 
-  require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
+  
   if(isset($_SESSION[KEY_ERRORS])){
     $errors=$_SESSION[KEY_ERRORS];
     unset($_SESSION[KEY_ERRORS]);
   }
   
 ?>
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz AAP</title>
+  
+    <link rel="stylesheet" href="<?=WEB_PUBLIC."css".DIRECTORY_SEPARATOR."style.connexion.css"?>">
+    
+</head>
+<body>
         <div id="text">
            <h1>le plaisir de jouer</h1>
     
@@ -54,8 +68,10 @@
                 </div>
             </form>
         </div>
- <?php 
-  require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.inc.html.php")
-?>
+ 
+       <script src=" <?=WEB_PUBLIC."js".DIRECTORY_SEPARATOR."script.connexion.js"?>"></script>
+       
+    </body>
+  </html> 
 
         

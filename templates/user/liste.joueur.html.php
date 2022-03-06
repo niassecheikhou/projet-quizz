@@ -1,5 +1,5 @@
 <?php 
-  require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php")
+  require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
 ?>
     
     <div style="margin:50px 70px" style="border:2px solid black;">

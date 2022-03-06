@@ -33,6 +33,8 @@
             }elseif($_REQUEST['action']=="liste.joueur"){
                
                lister_joueur(); 
+            }elseif($_REQUEST['action']=="admin"){
+               create_admin();
             }
          }
      } 
@@ -41,6 +43,7 @@
         // appel du model
         ob_start();
         $data=find_users(ROLE_JOUEUR);
+        
      
         require_once (PATH_VIEWS."user".DIRECTORY_SEPARATOR."liste.joueur.html.php");
          $content_for_views = ob_get_clean();
@@ -57,4 +60,11 @@
       $content_for_views=ob_get_clean();
       require_once (PATH_VIEWS."user".DIRECTORY_SEPARATOR."acceuil.html.php");
 
-   }  
+   } 
+   function create_admin(){
+      ob_start();
+      require_once (PATH_VIEWS."user".DIRECTORY_SEPARATOR."admin.html.php");
+      $content_for_views=ob_get_clean();
+      require_once (PATH_VIEWS."user".DIRECTORY_SEPARATOR."acceuil.html.php");
+
+   } 

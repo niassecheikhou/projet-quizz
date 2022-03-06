@@ -41,7 +41,7 @@
         </div>
         <ul>
             <li><a href="#"><i class="fas fa-home"></i>Liste des Question</a></li>
-            <li><a href="#"><i class="fas fa-address-card"></i>Creer Admin</a></li>
+            <li><a href="<?=WEB_ROOT."?controlers=user&action=admin"?>"><i class="fas fa-address-card"></i>Creer Admin</a></li>
             <li><a href="<?=WEB_ROOT."?controlers=user&action=liste.joueur"?>"><i class="fas fa-project-diagram"></i>Liste joueur</a></li>
             <li><a href="#"><i class="fas fa-blog"></i>Creer Question</a></li>
         </ul> 

@@ -4,7 +4,7 @@ body{
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
-    background-image: url('..imag/db.jpeg'); 
+     
     }
 
   .bar{
@@ -53,13 +53,7 @@ body{
 }
 
 
-.part2{
- 
 
-  flex: 1;
-   background-color: aqua;
-
-}
 
 .input {
   display: flex;
@@ -140,8 +134,23 @@ label{
   border: none;
 }
 
+/* :::::::::: partie avatar:::::::: */
+
+.part2{
+ 
+
+  flex: 1;
+   /* background-color: aqua; */
+   display: flex;
+   justify-content: center;
+
+}
+
 .part2 img{
   margin-left: 1rem;
+  height: 50vh;
+
+  
 }
 
 .error{

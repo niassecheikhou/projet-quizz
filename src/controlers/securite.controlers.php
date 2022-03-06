@@ -123,7 +123,12 @@
          
          $newUser=register_new_users();
          array_to_json($newUser,"users");
-         header("Location: ".WEB_ROOT."?controlers=securite");
+         if(isset($_SESSION[KEY_USER_CONNECT])){
+            header("Location: ".WEB_ROOT."?controlers=user&action=admin");
+         }else{
+            header("Location: ".WEB_ROOT."?controlers=securite");
+         }
+         
          
 
       }else{
