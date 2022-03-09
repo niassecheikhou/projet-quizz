@@ -6,10 +6,22 @@
     
    }
    $_SESSION[KEY_USER_CONNECT];
-   require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
+//    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
 ?>
 
-
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz AAP</title>
+    <link rel="stylesheet" href="<?=WEB_PUBLIC."css".DIRECTORY_SEPARATOR."style.admin.css"?>">
+    
+</head>
+<body>
     
      
  <form  action="<?=WEB_ROOT?>"  method="POST" id="form" >
@@ -20,14 +32,14 @@
             <input type="hidden" name="score" value="0">
 
 
-        <div class="big">
-            <div class="container">
+        <div class="big1">
+            <div class="container1">
         
               <h1>S'INSCRIRE </h1>
               <p>Pour tester votre niveau de culture generale</p>
 
               
-                <div class="input">
+                <div class="input1">
 
 
                     <input type="text" class="input-field" name="nom" id="nom" />
@@ -41,7 +53,7 @@
                     
                     
                     </div>
-                    <div class="input">
+                    <div class="input1">
                             <input type="text" class="input-field" name="prenom" id="prenom" />
                             <label class="input-label">prenom</label>
                             <?php if(isset($errors['prenom'])):?>
@@ -51,7 +63,7 @@
                     
                      </div> 
 
-                     <div class="input">
+                     <div class="input1">
                             <input type="text" class="input-field" name="login" id="login" />
                             <label class="input-label">Login</label>
                             <?php if(isset($errors['login'])):?>
@@ -61,7 +73,7 @@
                     
                      </div>
 
-                    <div class="input">
+                    <div class="input1">
                             <input type="password" class="input-field" name="password" id="password" />
                             <label class="input-label" name="passwd">passwordd</label>
                             <?php if(isset($errors['password'])):?>
@@ -71,7 +83,7 @@
                 
                     </div>
 
-                    <div class="input">
+                    <div class="input1">
                         <input type="password" class="input-field" name="password1" id="password1" />
                         <label class="input-label" name="passwd">confirmer Password</label>
                         <?php if(isset($errors['password1'])):?>
@@ -81,10 +93,10 @@
                 
                     </div>
                 
-                <div class="fichier">
+                <div class="fichier1">
                 <input type="" value="choisir un fichier">
                 </div>
-                     <div class="end">
+                     <div class="end1">
                      <input type="submit" value="Creer un compte">
                  </div>
         

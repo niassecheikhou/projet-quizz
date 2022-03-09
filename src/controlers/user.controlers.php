@@ -9,7 +9,16 @@
                 
                 echo "Traiter le formulaire de connexion";
 
-        }
+            }elseif($_REQUEST["action"]=="question"){
+               $put1 = $_POST["put1"];
+               $put2 = $_POST["put2"];
+               $put3 = $_POST["put3"];
+               $cm = $_POST["cm_${i}"];
+               var_dump($cm);die();
+              
+               var_dump($_POST);die();
+            }
+
         }
      }
 
@@ -35,6 +44,9 @@
                lister_joueur(); 
             }elseif($_REQUEST['action']=="admin"){
                create_admin();
+            }elseif($_REQUEST['action']=="question"){
+               create_question();
+               
             }
          }
      } 
@@ -68,3 +80,11 @@
       require_once (PATH_VIEWS."user".DIRECTORY_SEPARATOR."acceuil.html.php");
 
    } 
+
+   function create_question(){
+      ob_start();
+
+      require_once (PATH_VIEWS."user".DIRECTORY_SEPARATOR."question.html.php");
+      $content_for_views=ob_get_clean();
+      require_once (PATH_VIEWS."user".DIRECTORY_SEPARATOR."acceuil.html.php");
+   }

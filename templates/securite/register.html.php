@@ -16,7 +16,7 @@
         
             <input type="hidden" name="controlers" value="securite"> 
             <input type="hidden" name="action" value="register">
-            <input type="hidden" name="role" value=" <?= isset($_SESSION[KEY_USER_CONNECT]) ? "ROLE_ADMIN" : "ROLE_JOUEUR" ?>"/>  
+            <input type="hidden" name="role" value=" <?= isset($_SESSION[KEY_USER_CONNECT]) ?"ROLE_ADMIN":"ROLE_JOUEUR" ?>"/>  
             <input type="hidden" name="score" value="0">
 
 

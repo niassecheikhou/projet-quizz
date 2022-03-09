@@ -20,7 +20,6 @@ function find_users(string $role):array{
         if($users['role']==$role) 
         $result[]=$users;
     }
-
     return $result;
 }
 
